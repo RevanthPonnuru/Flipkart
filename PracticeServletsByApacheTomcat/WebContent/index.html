@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<title>Welcome to Servlets</title>
+</head>
+<body>
+<form action="PracticeXmlServletUrl" method="post">
+<div class="form-group">
+    <label for="FirstName">FirstName:</label>
+    <input type="text" class="form-control" id="servletformfirstname" placeholder="Example:Revanth">
+  </div>
+  <div class="form-group">
+    <label for="LastName">LastName</label>
+    <input type="text" class="form-control" id="servletformlastname" placeholder="Example:Revanth">
+  </div>
+  <div class="form-group">
+    <label for="Email">Email</label>
+    <input type="email" class="form-control" id="servletformemail" placeholder="Example:---@gmail.com,@yahoo.com,@outlook.com">
+  </div>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="Designation" id="servletDeveloper" autocomplete="off" checked> Developer
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="Designation" id="servletTester" autocomplete="off"> Tester
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="Designation" id="servletAnalyser" autocomplete="off"> Analyst
+  </label>
+</div>
+  <div class="form-group">
+    <label for="Select Your Priority Locations">Location</label>
+    <select multiple class="form-control" id="servletprioritylocations" name = "location">
+      <option>Hyderabad</option>
+      <option>Banglore</option>
+      <option>Chennai</option>
+      <option>Mumbai</option>
+      <option>Maharashtra</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="Submit"></label>
+   <input type="submit" class="btn btn-info" value="Submit" id = "servletsubmit">
+  </div>
+</form>
+</form>
+</body>
+
+</html>
