@@ -3,16 +3,15 @@
   <display-name>OnlineShoppingByFlipkart</display-name>
   <welcome-file-list>
     <welcome-file>shoppingregistration.jsp</welcome-file>
-    
   </welcome-file-list>
   <servlet>
-		<description></description>
-		<display-name>ShoppingRegistrationController</display-name>
-		<servlet-name>ShoppingRegistrationController</servlet-name>
-		<servlet-class>com.capgemini.onlineshopping.ShoppingRegistrationController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ShoppingRegistrationController</servlet-name>
-		<url-pattern>/ShoppingRegistrationController</url-pattern>
-	</servlet-mapping>
+    <description></description>
+    <display-name>ShoppingRegistrationController</display-name>
+    <servlet-name>ShoppingRegistrationController</servlet-name>
+    <servlet-class>com.capgemini.onlineshopping.ShoppingRegistrationController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShoppingRegistrationController</servlet-name>
+    <url-pattern>/ShoppingRegistrationController</url-pattern>
+  </servlet-mapping>
 </web-app>

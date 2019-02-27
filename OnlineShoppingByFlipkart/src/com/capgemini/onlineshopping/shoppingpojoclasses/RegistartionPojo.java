@@ -7,10 +7,10 @@ public class RegistartionPojo {
 	private String Password;
 	private String ConfirmPassword;
 	private String RegistratedEmail;
-	private int Phonenumber;
+	private String Phonenumber;
 
 	public RegistartionPojo(String firstname, String lastName, String password, String confirmPassword,
-			String registratedEmail, int phonenumber) {
+			String registratedEmail, String phonenumber) {
 		super();
 		Firstname = firstname;
 		LastName = lastName;
@@ -19,6 +19,14 @@ public class RegistartionPojo {
 		RegistratedEmail = registratedEmail;
 		Phonenumber = phonenumber;
 	}
+	
+
+	public RegistartionPojo(String password, String registratedEmail) {
+		super();
+		Password = password;
+		RegistratedEmail = registratedEmail;
+	}
+
 
 	public String getFirstname() {
 		return Firstname;
@@ -60,11 +68,11 @@ public class RegistartionPojo {
 		RegistratedEmail = registratedEmail;
 	}
 
-	public int getPhonenumber() {
+	public String getPhonenumber() {
 		return Phonenumber;
 	}
 
-	public void setPhonenumber(int phonenumber) {
+	public void setPhonenumber(String phonenumber) {
 		Phonenumber = phonenumber;
 	}
 

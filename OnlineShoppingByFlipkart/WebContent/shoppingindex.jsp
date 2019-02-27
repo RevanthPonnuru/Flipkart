@@ -61,7 +61,7 @@ footer {
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="shoppingregistration.jsp"><span
 							class="glyphicon glyphicon-user"></span> Sign up</a></li>
-					<li><a href="shoppinglogin.jsp.jsp"><span
+					<li><a href="shoppinglogin.jsp"><span
 							class="glyphicon glyphicon-user"></span> Sign in</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-user"></span>
 							Your Account</a></li>
@@ -86,7 +86,7 @@ footer {
 						door with new features</div>
 
 				</div>
-				<button type="button" class="btn btn-primary" id="lgwashingmachine">Buy
+				<button type="button" class="btn btn-primary" id="lgwashingmachine"onclick="redirectLgPage()">Add To Cart
 					Now(15000/-)</button>
 			</div>
 
@@ -102,7 +102,7 @@ footer {
 						feautures</div>
 
 				</div>
-				<button type="button" class="btn btn-primary" id="whirpoolwashingmachine">Buy Now(17000/-)
+				<button type="button" class="btn btn-primary" id="whirpoolwashingmachine" onclick= "redirectWhirpoolPage()">Add To Cart Now(17000/-)
 					</button>
 			</div>
 			<div class="col-sm-4">
@@ -118,7 +118,7 @@ footer {
 
 
 				</div>
-				<button type="button" class="btn btn-primary" id="boschwashingmachine">Buy
+				<button type="button" class="btn btn-primary" id="boschwashingmachine" onclick= "redirectBoschPage()">Add To Cart
 					Now(20000/-)</button>
 			</div>
 		</div>
@@ -139,7 +139,7 @@ footer {
 					<div class="panel-footer">Having front load with extra
 						battery backup</div>
 				</div>
-				<button type="button" class="btn btn-primary" id="samsungwashingmachine">Buy
+				<button type="button" class="btn btn-primary" id="samsungwashingmachine" onclick = "redirectSamsungPage()">Add To Cart
 					Now (12000/-)</button>
 			</div>
 
@@ -155,7 +155,7 @@ footer {
 						battery backup</div>
 
 				</div>
-				<button type="button" class="btn btn-primary" id="mistibushiwashingmachine">Buy
+				<button type="button" class="btn btn-primary" id="mistibushiwashingmachine" onclick = "redirectMitsibushiPage()">Add To Cart
 					Now(14000/-)</button>
 
 			</div>
@@ -167,10 +167,10 @@ footer {
 							src="http://www.techwinter.com/wp-content/uploads/2015/09/LG-Front-Loading-Automatic-Washing.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 					</div>
-					<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+					<div class="panel-footer">Add To Cart 50 mobiles and get a gift card</div>
 
 				</div>
-				<button type="button" class="btn btn-primary" id="panasonicwashingmachine">Buy
+				<button type="button" class="btn btn-primary" id="panasonicwashingmachine" onclick = "redirectPanasonicPage()">Add To Cart
 					Now(13000/-)</button>
 			</div>
 
@@ -187,6 +187,26 @@ footer {
 			<button type="button" class="btn btn-danger">Sign Up</button>
 		</form>
 	</footer>
+<script>
+function redirectLgPage() {
+  location.replace("detaileddescriptionoflgproduct.jsp")
+}
+function redirectWhirpoolPage(){
 
+	  location.replace("detaileddescriptionofwhirpool.jsp")
+}
+function redirectBoschPage(){
+	location.replace("detaileddescriptionofbosch.jsp")
+}
+function redirectPanasonicPage(){
+	location.replace("detaileddescriptionofpanasonic.jsp")
+}
+function redirectSamsungPage(){
+	location.replace("detaileddescriptionofsamsung.jsp")
+}
+function redirectMitsibushiPage(){
+	location.replace("detaileddescriptionofmitsibushi.jsp")
+}
+</script>
 </body>
 </html>

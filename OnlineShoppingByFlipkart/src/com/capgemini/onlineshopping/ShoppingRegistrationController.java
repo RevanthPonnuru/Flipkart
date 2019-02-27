@@ -1,12 +1,16 @@
 package com.capgemini.onlineshopping;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.capgemini.onlineshopping.dao.UserRegistration;
+import com.capgemini.onlineshopping.shoppingpojoclasses.RegistartionPojo;
 
 
 	public class ShoppingRegistrationController extends HttpServlet {
@@ -33,13 +37,14 @@ import javax.servlet.http.HttpServletResponse;
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			// TODO Auto-generated method stub
 			response.setContentType("text/html");
-		/* PrintWriter printwriter = response.getWriter(); */
+		PrintWriter printwriter = response.getWriter(); 
 			String Firstname = request.getParameter("firstname");
 			String Lastname = request.getParameter("lastname");
 			String Password = request.getParameter("password");
 			String Confirmpassword = request.getParameter("confirmpassword");
 			String Registrationemail = request.getParameter("registrationemail");
-			String Useranswer = request.getParameter("answer");
+			/*String Useranswer = request.getParameter("answer");*/
+			String number=request.getParameter("txtEmpPhone");
 		/*
 		 * PrintWriter out = response.getWriter(); out.println("Revanth");
 		 */
@@ -52,16 +57,19 @@ import javax.servlet.http.HttpServletResponse;
 				RequestDispatcher requestdispatcher = request.getRequestDispatcher("shoppingregistration.jsp");
 				requestdispatcher.forward(request, response);
 			}
-		/*
-		 * if(Firstname.isEmpty()||Lastname.isEmpty()||Password.isEmpty()||
-		 * Confirmpassword.isEmpty()||Registrationemail.isEmpty()||Useranswer.isEmpty())
-		 * { RequestDispatcher requestdispatcher =
-		 * request.getRequestDispatcher("ShoppingRegistrationController"); printwriter.
-		 * println("<font color=red>Please fill all the required fields</font>");
-		 * requestdispatcher.include(request, response); } else {
-		 * 
-		 * }
-		 */		}
+			try {
+				RegistartionPojo pojo =new RegistartionPojo(Firstname, Lastname, Password, Confirmpassword, Registrationemail, number);
+				try {
+					printwriter.println(new UserRegistration().insert(pojo));
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			catch(SQLException e) {
+				e.printStackTrace();
+			}
+			}
 
 	}
 
