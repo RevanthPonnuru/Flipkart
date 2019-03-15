@@ -46,7 +46,7 @@ public class UserRegistration {
 //			System.out.println(resultset.getString("Firstname") + "  " + resultset.getString("Lastname") + "  "
 //					+ resultset.getString("Password") + "  " + resultset.getString("ConfirmPassword") + "  "
 //					+ resultset.getString("Registratedemail") + "  " + resultset.getLong("Phonenumber"));
-//		}
+//		}     
 	  String output="inserted successfully";
 	return output;
 	  }

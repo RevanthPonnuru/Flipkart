@@ -35,6 +35,7 @@ footer {
 
 	<div class="jumbotron">
 		<div class="container text-center">
+		<img src = "https://images.financialexpress.com/2018/12/e-commerce-representational.jpg">
 			<h1>Flipkart</h1>
 			<p>Feel Free and Shop Fun</p>
 		</div>
@@ -53,16 +54,29 @@ footer {
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Products</a></li>
-					<li><a href="#">Deals</a></li>
-					<li><a href="#">Stores</a></li>
-					<li><a href="#">Contact</a></li>
+					
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="shoppingregistration.jsp"><span
 							class="glyphicon glyphicon-user"></span> Sign up</a></li>
 					<li><a href="shoppinglogin.jsp"><span
 							class="glyphicon glyphicon-user"></span> Sign in</a></li>
+							<% 
+      if(session.getAttribute("username")==null)
+      {
+      %>
+      	 
+    	 
+      <%
+      }
+      else
+      {
+      %>
+      	 <li><a href="LogoutServlet"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+      </ul>
+      <%
+      }	
+      %>
 					<li><a href="#"><span class="glyphicon glyphicon-user"></span>
 							Your Account</a></li>
 					<li><a href="#"><span
